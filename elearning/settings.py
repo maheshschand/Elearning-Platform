@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'memcache_status',
     'rest_framework',
     'chat',
-    'channels',
+    
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
