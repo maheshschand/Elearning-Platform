@@ -25,18 +25,18 @@
 },
 {
   "model": "courses.subject",
-  "pk": 4,
+  "pk": 6,
   "fields": {
-    "title": "Operating Systems",
-    "slug": "operating-systems"
+    "title": "Arts",
+    "slug": "arts"
   }
 },
 {
   "model": "courses.subject",
-  "pk": 5,
+  "pk": 7,
   "fields": {
-    "title": "Computer Networks",
-    "slug": "computer-networks"
+    "title": "Social studies",
+    "slug": "social-studies"
   }
 }
 ]

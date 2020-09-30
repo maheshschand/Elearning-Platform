@@ -18,6 +18,15 @@ from django.views.generic.detail import DetailView
 from students.forms import CourseEnrollForm
 from django.core.cache import cache
 
+
+def error_404_view(request, exception):
+    return render(request, "404.html")
+
+
+def error_500_view(request, exception):
+    return render(request, "500.html")
+
+
 class OwnerMixin(object):
     def get_queryset(self):
         qs = super().get_queryset()
