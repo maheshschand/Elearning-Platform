@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 import os
 from django.urls import reverse_lazy
 import dj_database_url
+import django_heroku
 
 
 LOGIN_REDIRECT_URL = reverse_lazy('student_course_list')
@@ -177,3 +178,4 @@ CHANNEL_LAYERS = {
         },
     },
 }
+django_heroku.settings(locals())
