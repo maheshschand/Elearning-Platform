@@ -13,7 +13,6 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 import os
 from django.urls import reverse_lazy
 import dj_database_url
-import django_heroku
 
 
 LOGIN_REDIRECT_URL = reverse_lazy('student_course_list')
@@ -28,9 +27,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '32y(sa7py#!+zp9rl!7oz@$ku(osq_vd-4yt)o9dg10#o)9&w6'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'elearning-ju.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1', '.herokuapp.com']
 
 
 # Application definition
@@ -98,9 +97,9 @@ DATABASES = {
         # 'ENGINE': 'django.db.backends.sqlite3',
         # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': '<database_name>',
-        'USER': '<user_name>',
-        'PASSWORD': '<password>',
+        'NAME': 'elearning-ju',
+        'USER': 'name',
+        'PASSWORD': '',
         'HOST': 'localhost',
         'PORT': '',
     }
@@ -151,7 +150,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
-# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 

@@ -7,3 +7,4 @@ students/__pycache__
 students/migrations
 staticfiles/
 __pycache__
+venv/
