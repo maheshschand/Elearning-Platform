@@ -1,4 +1,4 @@
-*.sqlite3
+db.sqlite3
 elearning/__pycache__
 courses/__pycache__
 courses/api/__pycache__
@@ -6,5 +6,6 @@ courses/migrations
 students/__pycache__
 students/migrations
 staticfiles/
-__pycache__
+__pycache__/
 venv/
+local_settings.py
