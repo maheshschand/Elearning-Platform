@@ -1,9 +1,5 @@
 db.sqlite3
-elearning/__pycache__
-courses/__pycache__
-courses/api/__pycache__
-students/__pycache__
-staticfiles/
 __pycache__/
-venv/
-local_settings.py
+venv
+elearning/local_settings.py
+.env
