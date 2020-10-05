@@ -27,9 +27,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '32y(sa7py#!+zp9rl!7oz@$ku(osq_vd-4yt)o9dg10#o)9&w6'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['0.0.0.0', 'localhost', '127.0.0.1', 'elearning-ju.herokuapp.com']
+ALLOWED_HOSTS = ['localhost','127.0.0.1','elearning-ju.herokuapp.com']
 
 
 # Application definition
@@ -94,14 +94,14 @@ WSGI_APPLICATION = 'elearning.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        # 'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        # 'NAME': 'elearning-ju',
-        # 'USER': 'name',
-        # 'PASSWORD': '',
-        # 'HOST': 'localhost',
-        # 'PORT': '',
+        # 'ENGINE': 'django.db.backends.sqlite3',
+        # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': '<database_name>',
+        'USER': '<user_name>',
+        'PASSWORD': '<password>',
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
 
