@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 
 import os
 from django.urls import reverse_lazy
-import dj_database_url
+# import dj_database_url
 
 
 LOGIN_REDIRECT_URL = reverse_lazy('student_course_list')
@@ -35,7 +35,7 @@ ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'elearning-ju.herokuapp.com', '*']
 # Application definition
 
 INSTALLED_APPS = [
-    'whitenoise.runserver_nostatic',
+    # 'whitenoise.runserver_nostatic',
     'courses.apps.CoursesConfig',
     'students.apps.StudentsConfig',
     'embed_video',
@@ -59,7 +59,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
+    # 'whitenoise.middleware.WhiteNoiseMiddleware',
     # 'django.middleware.cache.UpdateCacheMiddleware',
     # 'django.middleware.cache.FetchFromCacheMiddleware',
 ]
@@ -94,19 +94,31 @@ WSGI_APPLICATION = 'elearning.wsgi.application'
 
 DATABASES = {
     'default': {
-        # 'ENGINE': 'django.db.backends.sqlite3',
-        # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': '<database_name>',
-        'USER': '<user_name>',
-        'PASSWORD': '<password>',
-        'HOST': 'localhost',
-        'PORT': '',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        # 'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        # 'NAME': '<database_name>',
+        # 'USER': '<user_name>',
+        # 'PASSWORD': '<password>',
+        # 'HOST': 'localhost',
+        # 'PORT': '',
     }
 }
 
-db_from_env = dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(db_from_env)
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'djangodatabase',
+#         'USER': 'dbadmin',
+#         'PASSWORD': '12345',
+#         'HOST': 'localhost',
+#         'PORT': '3306',
+#     }
+# }
+
+
+# db_from_env = dj_database_url.config(conn_max_age=500)
+# DATABASES['default'].update(db_from_env)
 
 
 # Password validation
@@ -150,7 +162,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
